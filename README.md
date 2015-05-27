@@ -1,3 +1,9 @@
+## Sources
+
+Javascript based library : https://github.com/Bluefieldscom/intl-tel-input
+Ruby based gem : https://github.com/ispyropoulos/intl-tel-input-rails
+French language generator : https://github.com/harold-s/harold-s/tree/master/intl-tel-input-french-translation
+
 # IntlPhonePicker
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/intl_phone_picker`. To experiment with that code, run `bin/console` for an interactive prompt.
@@ -19,6 +25,20 @@ And then execute:
 Or install it yourself as:
 
     $ gem install intl_phone_picker
+
+To use javascript and stylesheet libraries you need to add :
+
+  - In application default stylesheet file :
+
+    $  //= require intlTelInput
+
+  - In application default javascript file :
+
+    $ //= require intlTelInput
+
+  - If you want to enable it on all tel fields by default, add :
+
+    $ //= require intl_phone_picker
 
 ## Usage
 
