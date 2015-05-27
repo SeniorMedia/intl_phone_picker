@@ -30,15 +30,21 @@ To use javascript and stylesheet libraries you need to add :
 
   - In application default stylesheet file :
 
+    ```ruby
     //= require intlTelInput
+    ```
 
   - In application default javascript file :
 
+    ```ruby
     //= require intlTelInput
+    ```
 
   - If you want to enable it on all tel fields by default, add :
 
+    ```ruby
     //= require intl_phone_picker
+    ```
 
 ## Usage
 
