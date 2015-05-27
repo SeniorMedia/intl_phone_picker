@@ -1,8 +1,8 @@
 ## Sources
 
-Javascript based library : https://github.com/Bluefieldscom/intl-tel-input
-Ruby based gem : https://github.com/ispyropoulos/intl-tel-input-rails
-French language generator : https://github.com/harold-s/harold-s/tree/master/intl-tel-input-french-translation
+  - Javascript based library : https://github.com/Bluefieldscom/intl-tel-input
+  - Ruby based gem : https://github.com/ispyropoulos/intl-tel-input-rails
+  - French language generator : https://github.com/harold-s/harold-s/tree/master/intl-tel-input-french-translation
 
 # IntlPhonePicker
 
@@ -30,15 +30,15 @@ To use javascript and stylesheet libraries you need to add :
 
   - In application default stylesheet file :
 
-    $  //= require intlTelInput
+    //= require intlTelInput
 
   - In application default javascript file :
 
-    $ //= require intlTelInput
+    //= require intlTelInput
 
   - If you want to enable it on all tel fields by default, add :
 
-    $ //= require intl_phone_picker
+    //= require intl_phone_picker
 
 ## Usage
 
