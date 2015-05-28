@@ -10,3 +10,8 @@
     - Include '//= require intlTelInput_fr' to use it.
     - Include '//= require intlTelInput_us' to use default english number picker.
   - Phone number picker is automatically added to all 'tel' fields.
+
+# Version 0.0.3
+
+  - Fix US and FR translations .yml files (Can bug when integrating to existing rails project)
+
