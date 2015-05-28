@@ -1,3 +1,5 @@
+//= require libphonenumber/utils
+
 jQuery(document).ready(function($) {
 
   $("input[type=tel]").intlTelInput({
