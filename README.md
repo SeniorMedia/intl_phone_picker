@@ -5,6 +5,7 @@ https://rubygems.org/gems/intl_phone_picker
 IntlPhonePicker is a ruby gem which allow you to change your html5 "tel" fields into jQuery international phone number pickers.
 
 Feel free to contribute and add your own config translation files through pull requests !
+If you want to add a tranlation file, just put it into config/locales ! Or if you can't just send us by email, we will do it for you.
 
 ## Sources
 
@@ -40,6 +41,10 @@ To use javascript and stylesheet libraries you need to add :
 
     ```ruby
     //= require intlTelInput_[shortname_of_your_country]
+    ```
+    Example :
+    ```ruby
+    //= require intlTelInput_fr
     ```
 
 ## Usage

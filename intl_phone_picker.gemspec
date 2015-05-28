@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "intl_phone_picker"
   spec.version       = "0.0.2"
   spec.authors       = ["Fabien Dobat\n\n"]
-  spec.email         = ["fabien.dobat@gmail.fr"]
+  spec.email         = ["fabien.dobat@seniormedia.fr"]
 
   if spec.respond_to?(:metadata)
     # spec.metadata['allowed_push_host'] = "https://rubygems.org/gems/intl_phone_picker"
@@ -25,5 +25,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.8"
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_dependency "railties", ">= 3.1"
+  spec.add_dependency "railties", ">= 4.2.0"
+  spec.add_dependency "jquery-rails", ">= 4.0.3"
 end
