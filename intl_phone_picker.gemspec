@@ -7,15 +7,15 @@ Gem::Specification.new do |spec|
   spec.name          = "intl_phone_picker"
   spec.version       = "0.0.1"
   spec.authors       = ["Fabien Dobat\n\n"]
-  spec.email         = ["fabien.dobat@seniormedia.fr"]
+  spec.email         = ["fabien.dobat@gmail.fr"]
 
   if spec.respond_to?(:metadata)
-    # spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com' to prevent pushes to rubygems.org, or delete to allow pushes to any server."
+    spec.metadata['allowed_push_host'] = "https://rubygems.org/gems/intl_phone_picker"
   end
 
-  spec.summary       = %q{Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{Write a longer description or delete this line.}
-  # spec.homepage      = "Put your gem's website or public repo URL here."
+  spec.summary       = %q{Internationalize your tel fields into jQuery numbers pickers}
+  spec.description   = %q{IntlPhonePicker is a ruby gem which allow you to change your html5 "tel" fields into jQuery international phone number pickers.}
+  spec.homepage      = "https://github.com/SeniorMedia/intl_phone_picker"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split("\n")
@@ -25,5 +25,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.8"
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_dependency "railties", "~> 4.2.1"
+  spec.add_dependency "railties", ">= 3.1"
 end
