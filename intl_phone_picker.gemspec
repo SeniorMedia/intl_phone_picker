@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["fabien.dobat@gmail.fr"]
 
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "https://rubygems.org/gems/intl_phone_picker"
+    # spec.metadata['allowed_push_host'] = "https://rubygems.org/gems/intl_phone_picker"
   end
 
   spec.summary       = %q{Internationalize your tel fields into jQuery numbers pickers}
