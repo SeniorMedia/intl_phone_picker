@@ -1,10 +1,10 @@
 //= require libphonenumber/utils
+//= require intlTelInput
 
 jQuery(document).ready(function($) {
 
   $("input[type=tel]").intlTelInput({
-      defaultCountry: "fr",
-      preferredCountries: ['fr', 'be', 'ch', 'lu', 'ca', 'mc'],
+    defaultCountry: "us"
   });
 
 });

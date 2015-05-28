@@ -5,7 +5,7 @@ require 'intl_phone_picker/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "intl_phone_picker"
-  spec.version       = "0.0.1"
+  spec.version       = "0.0.2"
   spec.authors       = ["Fabien Dobat\n\n"]
   spec.email         = ["fabien.dobat@gmail.fr"]
 
