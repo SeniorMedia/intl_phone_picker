@@ -50,6 +50,8 @@ To use javascript and stylesheet libraries you need to add :
     #= require intlTelInput
     ```
 
+## Usage
+
   - To call intlTelInput input :
     ```ruby
     <%= intl_phone_[lang_shortname]_tag([your_specific_name]) %>
@@ -57,12 +59,13 @@ To use javascript and stylesheet libraries you need to add :
 
   - Example :
     ```ruby
-    <%= intl_phone_fr_tag('test') %> # For french
+    <%= intl_phone_tag_fr('test') %> # For french
     ```
 
-## Usage
-
-TODO: Write usage instructions here
+  - To use with a model (Activerecord), use (choose your language):
+  ```ruby
+  <%= f.intl_phone_input_fr(:phone)%>
+  ```
 
 ## Development
 

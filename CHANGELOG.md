@@ -22,3 +22,8 @@
   - Only one javascript file which contains all traductions.
   - Can swith switch between languages inside the same project (calling corresponding helper)
   - Helpers overrides 'telephone_field_tag' (can use same attributes)
+
+# Version 0.0.5
+
+  - Add Activerecord Helpers : 'intl_phone_input_fr' and 'intl_phone_input_us'
+  - Change name of view methods to 'intl_phone_tag_fr' and 'intl_phone_tag_us'
