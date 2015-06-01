@@ -3,7 +3,7 @@
 
 jQuery(document).ready(function($) {
 
-  $("input[type=tel]").intlTelInput({
+$("#intl_phone_input_us").intlTelInput({
     defaultCountry: "us"
   });
 

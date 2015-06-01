@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
     country.name = hashCountryDataTranslation[country.iso2];
   });
 
-  $("input[type=tel]").intlTelInput({
+  $("#intl_phone_input_fr").intlTelInput({
     defaultCountry: "fr",
     preferredCountries: ['fr', 'be', 'ch', 'lu', 'ca', 'mc'],
   });
