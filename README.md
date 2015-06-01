@@ -40,11 +40,16 @@ To use javascript and stylesheet libraries you need to add :
   - In application default javascript file :
 
     ```ruby
-    //= require intlTelInput_[shortname_of_your_country]
+    //= require intlTelInputLang
     ```
-    Example :
+  - To call intlTelInput input :
     ```ruby
-    //= require intlTelInput_fr
+    <%= intl_phone_[lang_shortname]_tag([your_specific_name]) %> # For french
+    ```
+
+  - Example :
+    ```ruby
+    <%= intl_phone_fr_tag('test') %> # For french
     ```
 
 ## Usage

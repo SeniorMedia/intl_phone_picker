@@ -15,3 +15,10 @@
 
   - Fix US and FR translations .yml files (Can bug when integrating to existing rails project)
 
+# Version 0.0.4
+
+  - Call only one stylesheet file and one javascript file
+  - Helpers 'intl_phone_fr_tag' and 'intl_phone_us_tag' were created
+  - Only one javascript file which contains all traductions.
+  - Can swith switch between languages inside the same project (calling corresponding helper)
+  - Helpers overrides 'telephone_field_tag' (can use same attributes)
