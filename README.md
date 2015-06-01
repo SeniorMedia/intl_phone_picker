@@ -59,12 +59,12 @@ To use javascript and stylesheet libraries you need to add :
 
   - Example :
     ```ruby
-    <%= intl_phone_tag('test') %> # For french
+    <%= intl_phone_tag('test') %>
     ```
 
   - To use with a model (Activerecord) :
   ```ruby
-  <%= f.intl_phone_input(:phone)%>
+  <%= f.intl_phone_input(:phone) %>
   ```
 
 ## Development
