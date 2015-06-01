@@ -1,11 +1,15 @@
 class IntlPhonePickerBuilder < ::ActionView::Helpers::FormBuilder
 
-  def intl_phone_input_fr(object_name, options = {})
-    telephone_field(object_name, options.merge(:class => 'intl_phone_input_fr'))
+  def self.available_languages
+    ['us', 'fr']
   end
 
-  def intl_phone_input_us(object_name, options = {})
-    telephone_field(object_name, options.merge(:class => 'intl_phone_input_us'))
+  def intl_phone_input(object_name, options = {})
+    if (I18n.locale && I18n.locale.to_s.in?(IntlPhonePickerBuilder.available_languages))
+      telephone_field(object_name, options.merge(:class => 'intl_phone_input_' + I18n.locale.to_s))
+    else
+      telephone_field(object_name, options.merge(:class => 'intl_phone_input_us'))
+    end
   end
 
 end

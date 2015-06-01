@@ -7,7 +7,7 @@ IntlPhonePicker is a ruby gem which allow you to change your html5 "tel" fields 
 Feel free to contribute and add your own config translation files through pull requests !
 If you want to add a tranlation file, just put it into config/locales ! Or if you can't just send us by email, we will do it for you.
 
-Currently supported languages : US, FR.
+Currently supported languages : US (default), FR. The gem takes the language of the locale from your project.
 
 ## Sources
 
@@ -54,17 +54,17 @@ To use javascript and stylesheet libraries you need to add :
 
   - To call intlTelInput input :
     ```ruby
-    <%= intl_phone_[lang_shortname]_tag([your_specific_name]) %>
+    <%= intl_phone_tag([your_specific_name]) %>
     ```
 
   - Example :
     ```ruby
-    <%= intl_phone_tag_fr('test') %> # For french
+    <%= intl_phone_tag('test') %> # For french
     ```
 
-  - To use with a model (Activerecord), use (choose your language):
+  - To use with a model (Activerecord) :
   ```ruby
-  <%= f.intl_phone_input_fr(:phone)%>
+  <%= f.intl_phone_input(:phone)%>
   ```
 
 ## Development

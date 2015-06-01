@@ -27,3 +27,8 @@
 
   - Add Activerecord Helpers : 'intl_phone_input_fr' and 'intl_phone_input_us'
   - Change name of view methods to 'intl_phone_tag_fr' and 'intl_phone_tag_us'
+
+# Version 0.0.6
+
+  - Select number picker country by locale of main application
+  - Only 2 helpers : 'intl_phone_tag' and 'intl_phone_input'

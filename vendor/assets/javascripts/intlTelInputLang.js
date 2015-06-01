@@ -13,15 +13,15 @@ jQuery(document).ready(function($) {
     });
   }
 
-
   $(".intl_phone_input_fr").intlTelInput({
     defaultCountry: "fr",
     preferredCountries: ['fr', 'be', 'ch', 'lu', 'ca', 'mc'],
+    nationalMode: true
   });
 
   $(".intl_phone_input_us").intlTelInput({
-      defaultCountry: "us"
-    });
-
+    defaultCountry: "us",
+    nationalMode: true
+  });
 
 });
