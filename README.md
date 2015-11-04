@@ -36,18 +36,24 @@ To use javascript and stylesheet libraries you need to add :
   - In application default stylesheet file :
 
     ```ruby
-    //= require intlTelInput
+     *= require intlTelInput
     ```
 
   - In application default javascript file :
 
     ```ruby
-    //= require intlTelInputLang
+    //= require intlTelInput
     ```
 
     - Coffeescript version :
     ```ruby
     #= require intlTelInput
+    ```
+
+  - If you want to auto convert your tel inputs into phone pickers fields :
+
+    ```ruby
+    //= require intlTelInputLang
     ```
 
 ## Usage
