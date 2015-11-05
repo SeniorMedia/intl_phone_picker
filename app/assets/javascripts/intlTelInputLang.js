@@ -30,6 +30,11 @@ $(document).on("ready page:load", function(e) {
     // Set international phones values into hidden fields by default
     hidden_input.val(visible_input.intlTelInput("getNumber"));
 
+    // Update hidden field when visible one change
+    visible_input.on('change', function() {
+      hidden_input.val(visible_input.intlTelInput("getNumber"));
+    })
+
     // update the hidden input on submit
     hidden_input.closest('form').submit(function() {
       hidden_input.val(visible_input.intlTelInput("getNumber"));
