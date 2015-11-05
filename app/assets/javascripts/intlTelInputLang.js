@@ -21,4 +21,15 @@ $(document).on("ready page:load", function(e) {
     defaultCountry: "us",
     nationalMode: true
   });
+
+  // http://jackocnr.com/lib/intl-tel-input/examples/gen/hidden-input.html
+  $("input[type='hidden'][data-phone-field]").each(function() {
+    var hidden_input  = $(this);
+    var visible_input = $("input[type='tel'][name='" + $(this).data('phone-field') + "']");
+
+    // update the hidden input on submit
+    hidden_input.closest('form').submit(function() {
+      hidden_input.val(visible_input.intlTelInput("getNumber"));
+    });
+  });
 });

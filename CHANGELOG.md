@@ -1,4 +1,4 @@
-# Version 0.0.1
+# Version 0.0.1
 
   - Import javascript and css libraries.
 
@@ -32,3 +32,13 @@
 
   - Select number picker country by locale of main application
   - Only 2 helpers : 'intl_phone_tag' and 'intl_phone_input'
+
+# Version 0.0.7
+
+  - Update to International Telephone Input v6.0.4
+  - Split Javascript manifest files with 'intlTelInput' and 'intlTelInputLang' (optionnal, for default phone pickers integrations)
+  - An argument named 'hidden_intl_field' can be passed into 'intl_phone_tag' options which add an hidden_field storing international phone (on submit of closest form)
+  - Its name can be choose (ex: hidden_intl_field: 'test_hidden') and return when form will be submit if 'intlTelInputLang' is required in Javascript manifest file
+  - Hidden filed option is also available for Activerecord helper 'intl_phone_input'. You will need to create an 'attr_accessor' with the name you choose, like 'full_phone'.
+  - Fix Travis builds by adding default test
+  - Code Refacto
