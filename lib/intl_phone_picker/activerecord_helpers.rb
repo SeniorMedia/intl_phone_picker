@@ -1,4 +1,4 @@
-class IntlPhonePickerBuilder < ::ActionView::Helpers::FormBuilder
+class ActionView::Helpers::FormBuilder
 
   def intl_phone_input(object_name, options = {})
     class_name = 'intl_phone_input_' + IntlPhonePicker::langage_to_use

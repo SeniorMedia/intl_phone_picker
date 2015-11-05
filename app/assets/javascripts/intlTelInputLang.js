@@ -27,6 +27,9 @@ $(document).on("ready page:load", function(e) {
     var hidden_input  = $(this);
     var visible_input = $("input[type='tel'][name='" + $(this).data('phone-field') + "']");
 
+    // Set international phones values into hidden fields by default
+    hidden_input.val(visible_input.intlTelInput("getNumber"));
+
     // update the hidden input on submit
     hidden_input.closest('form').submit(function() {
       hidden_input.val(visible_input.intlTelInput("getNumber"));
