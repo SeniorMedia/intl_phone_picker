@@ -73,6 +73,18 @@ To use javascript and stylesheet libraries you need to add :
   <%= f.intl_phone_input(:phone) %>
   ```
 
+## Options
+
+  - If you want to enable an hidden field which store the international number of your field :
+  ```ruby
+  <%= intl_phone_tag('test', hidden_intl_field: :full_phone) %>
+  ```
+
+  - Activerecord way (Don't forget to create the named accessor in your model, full_phone in this example) :
+  ```ruby
+  <%= f.intl_phone_input :Phone, { hidden_intl_field: :full_phone } %>
+  ```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.
