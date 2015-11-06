@@ -1,4 +1,5 @@
 # IntlPhonePicker
+[![Build Status](https://travis-ci.org/SeniorMedia/intl_phone_picker.svg?branch=master)](https://travis-ci.org/SeniorMedia/intl_phone_picker)
 
 https://rubygems.org/gems/intl_phone_picker
 
