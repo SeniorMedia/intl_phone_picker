@@ -1,5 +1,3 @@
-//= require libphonenumber/utils
-
 /*
 International Telephone Input v6.0.4
 https://github.com/Bluefieldscom/intl-tel-input.git
