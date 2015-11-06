@@ -2,7 +2,7 @@ require 'intl_phone_picker/view_helpers'
 require 'intl_phone_picker/activerecord_helpers'
 
 module IntlPhonePicker
-  class Engine < ::Rails::Engine
+  class Engine < Rails::Engine
   end
 
   class Railtie < Rails::Railtie
