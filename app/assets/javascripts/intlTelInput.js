@@ -1,5 +1,5 @@
 //= require libphonenumber/utils
-//= require intlTelInputCore.js
+//= require intlTelInputCore
 
 /*
 International Telephone Input v6.0.4
