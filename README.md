@@ -51,10 +51,9 @@ To use javascript and stylesheet libraries you need to add :
     #= require intlTelInput
     ```
 
-  - If you want to auto convert your tel inputs into phone pickers fields :
-
+    - Optionnal : if you want to convert all the country names into French :
     ```ruby
-    //= require intlTelInputLang
+    //= require intlTelInputFrench
     ```
 
 ## Usage

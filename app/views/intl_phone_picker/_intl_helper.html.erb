@@ -1,0 +1,11 @@
+<%= phones_fields -%>
+<% hidden_input_name ||= nil %>
+
+<%= javascript_tag do -%>
+  var visible_input = $("input[type='tel'][name='<%= visible_input_name %>']");
+  toggle_intl_tel_input(visible_input);
+  <% if hidden_input_name %>
+  var hidden_input = $("input[type='hidden'][name='<%= hidden_input_name %>']");
+  synchronise_visible_hidden_fields(visible_input, hidden_input);
+  <% end -%>
+<% end -%>
