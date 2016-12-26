@@ -43,3 +43,9 @@
   - Hidden filed option is also available for Activerecord helper 'intl_phone_input'. You will need to create an 'attr_accessor' with the name you choose, like 'full_phone'. Exemple : 'f.intl_phone_input :Phone, { hidden_intl_field: :full_phone }'
   - Fix Travis builds by adding default test
   - Code Refacto
+
+# Version 1.0.0
+
+  - Bump lib to version 10.0.0
+  - Wait for document 'turbolinks ready' (Rails 5) event before applying script
+  - Prevent from submit invalid phone number by default

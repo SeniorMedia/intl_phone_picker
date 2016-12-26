@@ -1,35 +1,57 @@
-function toggle_intl_tel_input(visible_input) {
-  options = {};
+function toggleIntlTelInput(visibleInput) {
+  options = {}
 
-  if (visible_input.hasClass('intl_phone_input_fr')) {
+  if (visibleInput.hasClass('intl_phone_input_fr')) {
     options = {
-      defaultCountry: 'fr',
+      initialCountry: 'fr',
       preferredCountries: ['fr', 'be', 'ch', 'lu', 'ca', 'mc'],
       nationalMode: true
-    };
+    }
   }
-  else if (visible_input.hasClass('intl_phone_input_us')) {
+  else if (visibleInput.hasClass('intl_phone_input_us')) {
     options = {
-      defaultCountry: 'us',
+      initialCountry: 'us',
       nationalMode: true
-    };
+    }
   }
 
-  visible_input.intlTelInput(options);
+  visibleInput.intlTelInput(options)
 }
 
-function synchronise_visible_hidden_fields(visible_input, hidden_input) {
-  update_hidden_phone_field(visible_input, hidden_input);
+function synchronizeVisibleHiddenFields(visibleInput, hiddenInput) {
+  updateHiddenPhoneField(visibleInput, hiddenInput)
 
-  visible_input.on('change', function() {
-    update_hidden_phone_field(visible_input, hidden_input);
-  });
+  visibleInput.on('keyup', function(event) {
+    var selectedCountry = $(event.target).intlTelInput("getSelectedCountryData")
+    var formattedNumber = intlTelInputUtils.formatNumber(this.value, selectedCountry.iso2, intlTelInputUtils.numberFormat.NATIONAL)
 
-  visible_input.closest('form').submit(function() {
-    update_hidden_phone_field(visible_input, hidden_input);
-  });
+    $(event.target).val(formattedNumber)
+
+    updateHiddenPhoneField($(event.target), hiddenInput)
+  })
+
+  visibleInput.closest('form').on('submit', function(event) {
+    updateHiddenPhoneField($(event.target), hiddenInput)
+
+    if (toggleValidation($(event.target)) == false)
+      e.preventDefault()
+  })
 }
 
-function update_hidden_phone_field(visible_input, hidden_input) {
-  hidden_input.val(visible_input.intlTelInput("getNumber"));
+function updateHiddenPhoneField(visibleInput, hiddenInput) {
+  hiddenInput.val(visibleInput.intlTelInput("getNumber"))
+}
+
+function toggleValidation(phone_input) {
+  var isPhoneValid = phone_input.intlTelInput('isValidNumber')
+
+  if (!isPhoneValid) {
+    phone_input.closest('.form-group').addClass('has-danger')
+    phone_input.addClass('form-control-danger')
+  } else {
+    phone_input.closest('.form-group').removeClass('has-danger')
+    phone_input.removeClass('form-control-danger')
+  }
+
+  return (isPhoneValid)
 }
