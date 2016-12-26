@@ -31,10 +31,10 @@ function synchronizeVisibleHiddenFields(visibleInput, hiddenInput) {
   })
 
   visibleInput.closest('form').on('submit', function(event) {
-    updateHiddenPhoneField($(event.target), hiddenInput)
+    updateHiddenPhoneField(visibleInput, hiddenInput)
 
-    if (toggleValidation($(event.target)) == false)
-      e.preventDefault()
+    if (toggleValidation(visibleInput) == false)
+      event.preventDefault()
   })
 }
 
@@ -42,15 +42,15 @@ function updateHiddenPhoneField(visibleInput, hiddenInput) {
   hiddenInput.val(visibleInput.intlTelInput("getNumber"))
 }
 
-function toggleValidation(phone_input) {
-  var isPhoneValid = phone_input.intlTelInput('isValidNumber')
+function toggleValidation(phoneInput) {
+  var isPhoneValid = phoneInput.intlTelInput('isValidNumber');
 
   if (!isPhoneValid) {
-    phone_input.closest('.form-group').addClass('has-danger')
-    phone_input.addClass('form-control-danger')
+    phoneInput.closest('.form-group').addClass('has-danger')
+    phoneInput.addClass('form-control-danger')
   } else {
-    phone_input.closest('.form-group').removeClass('has-danger')
-    phone_input.removeClass('form-control-danger')
+    phoneInput.closest('.form-group').removeClass('has-danger')
+    phoneInput.removeClass('form-control-danger')
   }
 
   return (isPhoneValid)

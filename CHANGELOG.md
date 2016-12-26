@@ -49,3 +49,7 @@
   - Bump lib to version 10.0.0
   - Wait for document 'turbolinks ready' (Rails 5) event before applying script
   - Prevent from submit invalid phone number by default
+
+# Version 1.0.1
+
+  - Fix Javascript event
