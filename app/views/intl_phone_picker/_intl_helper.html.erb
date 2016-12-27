@@ -2,7 +2,7 @@
 <% hidden_input_name ||= nil %>
 
 <%= javascript_tag do -%>
-  $(document).on('turbolinks:load', function() {
+  document.addEventListener('turbolinks:load', function() {
   var visible_input = $("input[type='tel'][name='<%= visible_input_name %>']");
   toggleIntlTelInput(visible_input);
   <% if hidden_input_name %>
